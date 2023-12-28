@@ -1,0 +1,16 @@
+{
+  "git": {
+    "requireBranch": "main",
+    "commitMessage": "chore: release v${version}"
+  },
+  "hooks": {
+    "before:init": ["pnpm lint"],
+    "after:bump": "pnpm create auto-changelog -p"
+  },
+  "github": {
+    "release": true
+  },
+  "npm": {
+    "publish": false
+  }
+}
